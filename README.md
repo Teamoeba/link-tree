@@ -1,4 +1,4 @@
-# 🍵 Linktree Teh
+# Linktree Tea
 
 Halaman Linktree bertema teh yang lucu (*kawaii*), dibangun murni dengan HTML & CSS — tanpa framework, tanpa build step. Tinggal buka file-nya di browser.
 
@@ -6,10 +6,10 @@ Terdiri dari dua halaman:
 
 | File | Fungsi |
 |---|---|
-| `linktree-teh.html` | Halaman utama — daftar link (menu, donasi, video, kontak) |
+| `index.html` | Halaman utama — daftar link (menu, donasi, video, kontak) |
 | `about-me.html` | Halaman "About Me" — identitas diri & hobi (gaming, anime, menggambar) dengan galeri foto |
 
-## ✨ Fitur
+## Fitur
 
 - **Desain bertema teh** — palet warna krem/peach, aksen matcha, madu, dan clay
 - **100% responsif** — menyesuaikan dari HP kecil, HP besar, sampai tablet (pakai `clamp()` & media query)
@@ -21,11 +21,11 @@ Terdiri dari dua halaman:
   - Lightbox — foto bisa diklik untuk dilihat lebih besar
 - **Tanpa dependency berat** — hanya load Google Fonts (Baloo 2 & Quicksand) dari CDN
 
-## 📁 Struktur folder yang disarankan
+## Struktur folder
 
 ```
-linktree-teh/
-├── index.html          ← rename dari linktree-teh.html
+linktree/
+├── index.html          
 ├── about-me.html
 └── assets/
     ├── profil.png
@@ -43,13 +43,13 @@ Kalau foto-fotomu ditaruh di folder `assets/`, sesuaikan path `src`-nya, misalny
 <img src="assets/profil.png" alt="Foto profil Teamoeba" />
 ```
 
-## 🔧 Cara Kustomisasi
+## Cara Kustomisasi
 
 ### 1. Ganti foto & ikon
 Semua gambar saat ini pakai placeholder dari [placehold.co](https://placehold.co). Cari setiap tag `<img src="...">` dan ganti dengan path foto kamu sendiri (file lokal atau link online).
 
 ### 2. Ganti link tujuan
-Di `linktree-teh.html`, tiap kartu punya atribut `href`:
+Di `index.html`, tiap kartu punya atribut `href`:
 ```html
 <a class="link-card" href="https://youtube.com/@namamu" target="_blank" rel="noopener">
 ```
@@ -71,22 +71,22 @@ Semua warna diatur lewat CSS custom properties di `:root`, jadi cukup ubah di sa
 }
 ```
 
-## 🚀 Cara Menjalankan
+## Cara Menjalankan
 
 Tidak perlu instalasi apa pun — cukup buka file `.html` langsung di browser, atau:
 
 - **GitHub Pages**: push repo ini, aktifkan Pages di Settings → set source ke branch utama, halaman langsung online di `https://username.github.io/nama-repo/`
-- **Lokal**: klik dua kali file `linktree-teh.html`, atau jalankan local server sederhana:
+- **Lokal**: klik dua kali file `index.html`, atau jalankan local server sederhana:
   ```bash
   npx serve .
   ```
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - HTML5 & CSS3 murni (custom properties, flexbox, grid, `clamp()`)
 - Vanilla JavaScript (untuk accordion & lightbox di halaman About Me)
 - [Google Fonts](https://fonts.google.com) — Baloo 2 & Quicksand
 
-## 📄 Lisensi
+## Lisensi
 
 Bebas dipakai dan dimodifikasi untuk kebutuhan pribadi.
