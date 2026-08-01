@@ -1,0 +1,954 @@
+﻿<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>About Me — Teamoeba</title>
+    <meta
+      name="description"
+      content="Hai! Kenalan sama Teamoeba — identitas diri, hobi gaming, nonton anime, dan ngegambar."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-top: #f7e3ce;
+        --bg-bottom: #efc9a8;
+        --card: #fffbf3;
+        --card-border: #d9a874;
+        --brown: #6b4226;
+        --brown-soft: #8c5a34;
+        --matcha: #8ca772;
+        --matcha-dark: #6c8a52;
+        --honey: #e3a857;
+        --clay: #c97b4a;
+        --shadow: rgba(107, 66, 38, 0.18);
+        --shadow-lg: rgba(107, 66, 38, 0.25);
+        --gaming: #7b68ee;
+        --gaming-soft: #a89bf5;
+        --anime: #e86b8a;
+        --anime-soft: #f5a0b5;
+        --draw: #52b788;
+        --draw-soft: #8ecfaf;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        min-height: 100vh;
+        font-family: "Quicksand", sans-serif;
+        background:
+          radial-gradient(
+            circle at 15% 8%,
+            rgba(255, 255, 255, 0.35),
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 85% 92%,
+            rgba(255, 255, 255, 0.25),
+            transparent 45%
+          ),
+          linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+        background-attachment: fixed;
+        color: var(--brown);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: clamp(24px, 6vw, 56px) clamp(16px, 5vw, 24px)
+          clamp(60px, 10vw, 100px);
+      }
+      .leaf {
+        position: fixed;
+        font-size: 22px;
+        opacity: 0.45;
+        pointer-events: none;
+        animation: drift 7s ease-in-out infinite;
+        z-index: 0;
+      }
+      .leaf.l1 {
+        top: 60px;
+        left: 12px;
+        animation-delay: 0s;
+      }
+      .leaf.l2 {
+        top: 240px;
+        right: 8px;
+        animation-delay: 1.5s;
+      }
+      .leaf.l3 {
+        top: 520px;
+        left: 6px;
+        animation-delay: 3s;
+      }
+      .leaf.l4 {
+        top: 800px;
+        right: 14px;
+        animation-delay: 2s;
+      }
+      @keyframes drift {
+        0%,
+        100% {
+          transform: translateY(0) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-14px) rotate(12deg);
+        }
+      }
+      .back-btn {
+        align-self: flex-start;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        text-decoration: none;
+        color: var(--brown-soft);
+        font-family: "Baloo 2", sans-serif;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 7px 14px;
+        background: var(--card);
+        border: 2px solid var(--card-border);
+        border-radius: 50px;
+        box-shadow:
+          0 4px 0 0 var(--card-border),
+          0 6px 14px var(--shadow);
+        transition:
+          transform 0.15s ease,
+          box-shadow 0.15s ease;
+        margin-bottom: 28px;
+        z-index: 1;
+      }
+      .back-btn:hover {
+        transform: translateY(-2px);
+        box-shadow:
+          0 6px 0 0 var(--card-border),
+          0 10px 18px var(--shadow);
+      }
+      .back-btn:active {
+        transform: translateY(1px);
+        box-shadow:
+          0 2px 0 0 var(--card-border),
+          0 3px 8px var(--shadow);
+      }
+      .back-btn svg {
+        width: 16px;
+        height: 16px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .hero {
+        width: 100%;
+        max-width: 720px;
+        background: var(--card);
+        border: 2.5px solid var(--card-border);
+        border-radius: 28px;
+        box-shadow:
+          0 8px 0 0 var(--card-border),
+          0 14px 32px var(--shadow-lg);
+        padding: clamp(24px, 5vw, 40px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 6px;
+        background: linear-gradient(
+          90deg,
+          var(--honey),
+          var(--clay),
+          var(--matcha),
+          var(--honey)
+        );
+        border-radius: 28px 28px 0 0;
+      }
+      .avatar-ring {
+        width: clamp(100px, 28vw, 148px);
+        height: clamp(100px, 28vw, 148px);
+        border-radius: 50%;
+        padding: 5px;
+        background: linear-gradient(135deg, var(--honey), var(--clay));
+        box-shadow: 0 8px 24px var(--shadow-lg);
+        flex-shrink: 0;
+      }
+      .avatar-ring img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        border: 3px solid var(--card);
+      }
+      .hero-text {
+        text-align: center;
+      }
+      h1.name {
+        font-family: "Baloo 2", sans-serif;
+        font-weight: 800;
+        font-size: clamp(22px, 5.5vw, 32px);
+        color: var(--brown);
+        line-height: 1.2;
+        margin-bottom: 4px;
+      }
+      .subtitle {
+        font-family: "Baloo 2", sans-serif;
+        font-weight: 600;
+        font-size: clamp(13px, 3.2vw, 15px);
+        color: var(--clay);
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        flex-wrap: wrap;
+      }
+      .subtitle .dot {
+        color: var(--card-border);
+      }
+      .bio {
+        font-size: clamp(13px, 3.4vw, 14.5px);
+        color: var(--brown-soft);
+        line-height: 1.7;
+        max-width: 480px;
+        margin: 0 auto 16px;
+      }
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+      }
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: linear-gradient(135deg, var(--bg-top), var(--bg-bottom));
+        border: 1.5px solid var(--card-border);
+        border-radius: 50px;
+        padding: 5px 14px;
+        font-family: "Baloo 2", sans-serif;
+        font-weight: 600;
+        font-size: clamp(11.5px, 2.8vw, 13px);
+        color: var(--brown-soft);
+        box-shadow: 0 2px 6px var(--shadow);
+      }
+      .section-header {
+        width: 100%;
+        max-width: 720px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        z-index: 1;
+      }
+      .section-header h2 {
+        font-family: "Baloo 2", sans-serif;
+        font-weight: 800;
+        font-size: clamp(18px, 4.5vw, 24px);
+        color: var(--brown);
+        white-space: nowrap;
+      }
+      .section-header .line {
+        flex: 1;
+        height: 2.5px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, var(--card-border), transparent);
+      }
+      .section-header .emoji {
+        font-size: 1.3em;
+      }
+      .hobbies {
+        width: 100%;
+        max-width: 720px;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+        z-index: 1;
+      }
+      .hobby-card {
+        background: var(--card);
+        border: 2.5px solid var(--card-border);
+        border-radius: 24px;
+        box-shadow:
+          0 6px 0 0 var(--card-border),
+          0 12px 28px var(--shadow);
+        overflow: hidden;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .hobby-card:hover {
+        transform: translateY(-3px);
+        box-shadow:
+          0 9px 0 0 var(--card-border),
+          0 18px 36px var(--shadow-lg);
+      }
+      .hobby-card.gaming {
+        --accent: var(--gaming);
+        --accent-soft: var(--gaming-soft);
+      }
+      .hobby-card.anime {
+        --accent: var(--anime);
+        --accent-soft: var(--anime-soft);
+      }
+      .hobby-card.drawing {
+        --accent: var(--draw);
+        --accent-soft: var(--draw-soft);
+      }
+      .hobby-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: clamp(16px, 4vw, 22px) clamp(16px, 4vw, 24px);
+        border-bottom: 2px solid var(--bg-bottom);
+        cursor: pointer;
+        user-select: none;
+        position: relative;
+      }
+      .hobby-icon {
+        width: clamp(44px, 12vw, 56px);
+        height: clamp(44px, 12vw, 56px);
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--accent), var(--accent-soft));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: clamp(20px, 5vw, 26px);
+        flex-shrink: 0;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+      }
+      .hobby-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .hobby-title-wrap {
+        flex: 1;
+      }
+      .hobby-title-wrap h3 {
+        font-family: "Baloo 2", sans-serif;
+        font-weight: 700;
+        font-size: clamp(15px, 4vw, 18px);
+        color: var(--brown);
+        margin-bottom: 2px;
+      }
+      .hobby-title-wrap p {
+        font-size: clamp(11.5px, 2.8vw, 13px);
+        color: var(--brown-soft);
+        line-height: 1.4;
+      }
+      .chevron {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--bg-top);
+        border: 1.5px solid var(--card-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        transition:
+          transform 0.3s ease,
+          background 0.2s ease;
+      }
+      .chevron svg {
+        width: 14px;
+        height: 14px;
+        fill: none;
+        stroke: var(--brown-soft);
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: transform 0.3s ease;
+      }
+      .hobby-card.open .chevron {
+        background: var(--accent);
+        border-color: var(--accent);
+      }
+      .hobby-card.open .chevron svg {
+        stroke: #fff;
+        transform: rotate(180deg);
+      }
+      .hobby-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .hobby-card.open .hobby-body {
+        max-height: 2000px;
+      }
+      .hobby-desc {
+        padding: clamp(14px, 4vw, 20px) clamp(16px, 4vw, 24px);
+        font-size: clamp(13px, 3.3vw, 14px);
+        color: var(--brown-soft);
+        line-height: 1.75;
+        border-bottom: 2px dashed var(--bg-bottom);
+      }
+      .gallery-wrap {
+        padding: clamp(14px, 4vw, 20px) clamp(16px, 4vw, 24px)
+          clamp(18px, 4vw, 24px);
+      }
+      .gallery-label {
+        font-family: "Baloo 2", sans-serif;
+        font-weight: 700;
+        font-size: 12.5px;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .gallery-label::after {
+        content: "";
+        flex: 1;
+        height: 1.5px;
+        background: linear-gradient(90deg, var(--accent), transparent);
+        border-radius: 2px;
+        opacity: 0.4;
+      }
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(clamp(100px, 28vw, 160px), 1fr)
+        );
+        gap: 10px;
+      }
+      .gallery-grid .photo-slot {
+        border-radius: 12px;
+        overflow: hidden;
+        aspect-ratio: 4/3;
+        background: var(--bg-bottom);
+        border: 2px solid var(--card-border);
+        position: relative;
+        cursor: pointer;
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+      .gallery-grid .photo-slot:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 20px var(--shadow-lg);
+        z-index: 2;
+      }
+      .gallery-grid .photo-slot img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+      .gallery-grid .photo-slot:hover img {
+        transform: scale(1.06);
+      }
+      .photo-slot.placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        border-style: dashed;
+        color: var(--clay);
+        cursor: default;
+        opacity: 0.7;
+      }
+      .photo-slot.placeholder svg {
+        width: 24px;
+        height: 24px;
+        fill: none;
+        stroke: currentColor;
+        stroke-width: 1.5;
+      }
+      .photo-slot.placeholder span {
+        font-size: 11px;
+        font-weight: 600;
+        font-family: "Baloo 2", sans-serif;
+      }
+      .lightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(107, 66, 38, 0.82);
+        backdrop-filter: blur(8px);
+        z-index: 100;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+      .lightbox.active {
+        display: flex;
+      }
+      .lightbox img {
+        max-width: min(90vw, 700px);
+        max-height: 80vh;
+        border-radius: 16px;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+        object-fit: contain;
+        border: 4px solid var(--card);
+        animation: popIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+      @keyframes popIn {
+        from {
+          transform: scale(0.7);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .lightbox-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--card);
+        border: 2px solid var(--card-border);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: transform 0.15s ease;
+      }
+      .lightbox-close:hover {
+        transform: scale(1.1) rotate(10deg);
+      }
+      .lightbox-close svg {
+        width: 18px;
+        height: 18px;
+        fill: none;
+        stroke: var(--brown);
+        stroke-width: 2.5;
+        stroke-linecap: round;
+      }
+      footer {
+        margin-top: 52px;
+        text-align: center;
+        font-size: 12px;
+        color: var(--brown-soft);
+        z-index: 1;
+      }
+      footer .brand {
+        font-family: "Baloo 2", sans-serif;
+        font-weight: 700;
+        font-size: 14px;
+        color: var(--clay);
+      }
+      footer .teacup {
+        font-size: 18px;
+        vertical-align: middle;
+        animation: wobble 2.5s ease-in-out infinite;
+        display: inline-block;
+      }
+      @keyframes wobble {
+        0%,
+        100% {
+          transform: rotate(0deg);
+        }
+        30% {
+          transform: rotate(-8deg);
+        }
+        60% {
+          transform: rotate(6deg);
+        }
+      }
+      @media (min-width: 560px) {
+        .hero {
+          flex-direction: row;
+          align-items: flex-start;
+          text-align: left;
+          gap: 24px;
+        }
+        .hero-text {
+          text-align: left;
+        }
+        .subtitle {
+          justify-content: flex-start;
+        }
+        .chips {
+          justify-content: flex-start;
+        }
+        .bio {
+          margin: 0 0 16px 0;
+        }
+      }
+      @media (min-width: 900px) {
+        body {
+          padding-top: 72px;
+        }
+        .gallery-grid {
+          grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        }
+      }
+      @media (max-width: 360px) {
+        .hero,
+        .hobby-header {
+          padding: 16px;
+        }
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        h1.name {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <span class="leaf l1">🍃</span>
+    <span class="leaf l2">🍵</span>
+    <span class="leaf l3">🍃</span>
+    <span class="leaf l4">🌿</span>
+
+    <a class="back-btn" href="linktree-teh.html" id="btn-back">
+      <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" /></svg>
+      Kembali ke Linktree
+    </a>
+
+    <section class="hero" id="identitas" aria-labelledby="nama">
+      <div class="avatar-ring">
+        <img src="assets/profil.png" alt="Foto profil Teamoeba" />
+      </div>
+      <div class="hero-text">
+        <h1 class="name" id="nama">Teamoeba</h1>
+        <p class="subtitle">
+          <span>She / Her</span>
+          <span class="dot">·</span>
+          <span>🇮🇩 Indonesia</span>
+        </p>
+        <p class="bio">
+          Alloooo aku <strong>Teamoeba</strong> ato bisa di panggil Tea. Pecinta
+          teh hangat, anime, dan hal-hal yang imyutt. Aku menghabiskan setengah
+          dari hidupku untuk tidor, seperempatnya lagi makan, dan seperempatnya
+          lagi ngegame. Kata temenku "dasar nolep"
+        </p>
+        <div class="chips">
+          <div class="chip">umur? gada yang tau</div>
+          <div class="chip">jawir</div>
+          <div class="chip">angela only</div>
+          <div class="chip">maap coklat</div>
+          <div class="chip">afk? ketiduran</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-header">
+      <h2>My Hobbies</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="hobbies" id="hobbies">
+      <article class="hobby-card gaming open" id="card-gaming">
+        <div
+          class="hobby-header"
+          onclick="toggleCard('card-gaming')"
+          role="button"
+          aria-expanded="true"
+          aria-controls="body-gaming"
+          id="btn-gaming"
+        >
+          <div class="hobby-icon">
+            <img src="assets/game.png" alt="Ikon gaming">
+          </div>
+          <div class="hobby-title-wrap">
+            <h3>Gaming</h3>
+            <p>Explore dunia virtual, kalah menang tetap fun</p>
+          </div>
+          <div class="chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
+          </div>
+        </div>
+        <div class="hobby-body" id="body-gaming">
+          <div class="hobby-desc">
+            Aku menyukai game, dan mulai aktif bermain game sejak tahun 2016.
+            Berbagai jenis game pernah aku mainkan namun yang masih asik
+            dimainkan sampai sekarang the only one is "Mobile Legends".
+            Sebenarna bukan gamenya yang seru, melainkan orang-orangnya. Mobile
+            Legends adalah game mobile yang dapat dimainkan semua kalangan,
+            sehingga banyak orang orang terdeket dan spesial yg memainkan game
+            tersebut. Termasuk Kamu! Iya Kamu. Tapi boong. AWKAKAKAKAKSK
+          </div>
+          <div class="gallery-wrap">
+            <div class="gallery-label">Mobile Legends</div>
+            <div class="gallery-grid" id="gallery-gaming">
+              <div
+                class="photo-slot"
+                onclick="openLightbox('assets/ml1.jpg', 'Gaming vibes')"
+                id="slot-gaming-1"
+              >
+                <img src="assets/ml1.jpg" alt="Gaming illustration" loading="lazy" />
+              </div>
+              <div
+                class="photo-slot"
+                onclick="openLightbox('assets/ml2.jpg', 'Gaming vibes')"
+                id="slot-gaming-2"
+              >
+                <img src="assets/ml2.jpg" alt="Gaming illustration" loading="lazy" />
+              </div>
+              <div
+                class="photo-slot"
+                onclick="openLightbox('assets/ml3.jpg', 'Gaming vibes')"
+                id="slot-gaming-3"
+              >
+                <img src="assets/ml3.jpg" alt="Gaming illustration" loading="lazy" />
+              </div>
+            </div>
+          </div>
+          <div class="gallery-wrap">
+            <div class="gallery-label">Sky: Children of the light</div>
+            <div class="gallery-grid" id="gallery-gaming">
+              <div
+                class="photo-slot"
+                onclick="openLightbox('assets/sky2.jpg', 'Sky: Children of the light')"
+                id="slot-gaming-1"
+              >
+                <img
+                  src="assets/sky2.jpg"
+                  alt="Sky: Children of the light"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="photo-slot"
+                onclick="openLightbox('assets/sky3.jpg', 'Sky: Children of the light')"
+                id="slot-gaming-2"
+              >
+                <img
+                  src="assets/sky3.jpg"
+                  alt="Sky: Children of the light"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="photo-slot"
+                onclick="openLightbox('assets/sky4.jpg', 'Sky: Children of the light')"
+                id="slot-gaming-3"
+              >
+                <img
+                  src="assets/sky4.jpg"
+                  alt="Sky: Children of the light"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="hobby-card anime" id="card-anime">
+        <div
+          class="hobby-header"
+          onclick="toggleCard('card-anime')"
+          role="button"
+          aria-expanded="false"
+          aria-controls="body-anime"
+          id="btn-anime"
+        >
+          <div class="hobby-icon">
+            <img src="assets/nontn.png" alt="Ikon anime">
+          </div>
+          <div class="hobby-title-wrap">
+            <h3>Nonton Anime</h3>
+            <p>Nontn pas gabut + mood doang</p>
+          </div>
+          <div class="chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
+          </div>
+        </div>
+        <div class="hobby-body" id="body-anime">
+            <div class="hobby-desc">
+                Aku bukan wibu, cuman nonton beberapa anime aja. Mulai aktif nonton anime waktu libur 2 minggu yang berujung 2 tahun. Awalnya aku cuman nonton anime movie punya Makoto Shinkai, sampai akhirnya dihasut temen buat nonton One Piece. Aku bilang kedia "Anime apaan hampir 1000 episode gitu" karena ditahun itu episodenya baru sekitar 900-an kalo ga salah yang pasti belum nyampe 1000. Awalnya emang nolak eh ujung-ujungnya ditonton juga, dan sekarang udah kelar aja itu 1000 episode hehe.
+            </div>
+          <div class="gallery-wrap">
+            <div class="gallery-label">My Husbu</div>
+            <div class="gallery-grid" id="gallery-anime">
+              <div
+                class="photo-slot"
+                onclick="openLightbox('assets/eren.png', 'Anime time!')"
+                id="slot-anime-1"
+              >
+                <img
+                  src="assets/eren.png"
+                  alt="Eren Yeager"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="photo-slot"
+                onclick="openLightbox('assets/law.jpg', 'Anime time!')"
+                id="slot-anime-2"
+              >
+                <img
+                  src="assets/law.jpg"
+                  alt="Law"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="photo-slot"
+                onclick="openLightbox('assets/daisuke.png', 'Anime time!')"
+                id="slot-anime-3"
+              >
+                <img
+                  src="assets/daisuke.png"
+                  alt="Daisuke"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="hobby-card drawing" id="card-drawing">
+        <div
+          class="hobby-header"
+          onclick="toggleCard('card-drawing')"
+          role="button"
+          aria-expanded="false"
+          aria-controls="body-drawing"
+          id="btn-drawing"
+        >
+          <div class="hobby-icon">
+            <img src="assets/icongambar.png" alt="Ikon menggambar">
+          </div>
+          <div class="hobby-title-wrap">
+            <h3>Menggambar</h3>
+            <p>Biar ga natap gadget atau monitor mulu</p>
+          </div>
+          <div class="chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
+          </div>
+        </div>
+        <div class="hobby-body" id="body-drawing">
+          <div class="hobby-desc">
+            Aku tidak pandai menggambar, tidak paham anatomi, tidak paham perspektif, dan tidak paham shading. Aku Menggambar tanpa pola (freehand) dan hanya mengikuti contoh gambar atau referensi. Aku tidak pernah belajar menggambar, jadi aku tidak menerima kritik atas apa yang aku gambar. Orang bilang "gimana mau berkembang kalo ga nerima kritik?". Bagiku menggambar adalah sebuah seni. Dan seni adalah sebuah kebebasan. Tidak ada aturan dalam menggambar. Lagian aku menggambar hanya untuk mengisi rasa jenuh, bukan untuk orang lain apa lagi dikomersilkan.
+          </div>
+          <div class="gallery-wrap">
+            <div class="gallery-label">Ini beberapa</div>
+            <div class="gallery-grid" id="gallery-drawing">
+              <div
+                class="photo-slot"
+                onclick="openLightbox('assets/gambar1.jpg', 'Art time~')"
+                id="slot-draw-1"
+              >
+                <img
+                  src="assets/gambar1.jpg"
+                  alt="Drawing hobby illustration"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="photo-slot"
+                onclick="openLightbox('assets/gambar2.JPG', 'Art time~')"
+                id="slot-draw-2"
+              >
+                <img
+                  src="assets/gambar2.JPG"
+                  alt="Drawing hobby illustration"
+                  loading="lazy"
+                />
+              </div>
+              <div
+                class="photo-slot"
+                onclick="openLightbox('assets/gambar3.JPG', 'Art time~')"
+                id="slot-draw-3"
+              >
+                <img
+                  src="assets/gambar3.JPG"
+                  alt="Drawing hobby illustration"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <footer>
+      Dibuat oleh Ai ditangan Tea<br />
+      <span class="brand">Teamoeba</span> &copy; 2026
+    </footer>
+
+    <div
+      class="lightbox"
+      id="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Lihat foto"
+      onclick="closeLightbox(event)"
+    >
+      <button
+        class="lightbox-close"
+        onclick="closeLightbox()"
+        aria-label="Tutup"
+        id="btn-lightbox-close"
+      >
+        <svg viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <img id="lightbox-img" src="" alt="" />
+    </div>
+
+    <script>
+      function toggleCard(id) {
+        var card = document.getElementById(id);
+        var isOpen = card.classList.contains("open");
+        card.classList.toggle("open", !isOpen);
+        var btn = card.querySelector(".hobby-header");
+        btn.setAttribute("aria-expanded", String(!isOpen));
+      }
+      function openLightbox(src, alt) {
+        var lb = document.getElementById("lightbox");
+        var img = document.getElementById("lightbox-img");
+        img.src = src;
+        img.alt = alt || "";
+        lb.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+      function closeLightbox(e) {
+        if (
+          e &&
+          e.target !== document.getElementById("lightbox") &&
+          !e.target.closest(".lightbox-close")
+        )
+          return;
+        document.getElementById("lightbox").classList.remove("active");
+        document.body.style.overflow = "";
+      }
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeLightbox();
+      });
+    </script>
+  </body>
+</html>
